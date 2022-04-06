@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChurchUI.Views.OnboardingPage">
+
+
+    <Grid RowDefinitions="Auto, Auto, *" BackgroundColor="#ffffff" RowSpacing="20">
+        <StackLayout>
+            <Image Source="@drawable/country" HeightRequest="600" WidthRequest="250"/>
+        </StackLayout>
+        <Grid Grid.Row="1" BackgroundColor="#fff" Margin="0,-230,0,100">
+            <Label FontSize="32" FontAttributes="Bold" VerticalOptions="StartAndExpand" HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Choose Your Country" TextColor="#635592" FontSize="24" FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="-35" Margin="45" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <Frame BackgroundColor="#fff" CornerRadius="50" HeightRequest="25" WidthRequest="25" Padding="0" Margin="7,7,7,7">
+
+                    </Frame>
+                    <Entry Placeholder="Country" TextColor="Black" FontSize="16"  HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="2" Margin="0,-150,0,0"  BackgroundColor="White">
+            <Button Text="Next" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Orange"
+             Clicked="Button_Clicked"/>
+        </Grid>
+
+
+    </Grid>
+</ContentPage>
